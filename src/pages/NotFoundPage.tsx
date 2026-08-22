@@ -1,1 +1,10 @@
-şë+ı¸§ı¶¬{®%Šwµß¯İzÿìµÚ.´ê^­«b¢yè¶—«š+myßî²¿ÛŠÛjÇºàÎzºè®‰â›­
+import { Link } from 'react-router-dom'
+import { Container } from '../components/Container'
+import { useDocumentTitle } from '../hooks/useDocumentTitle'
+
+export function NotFoundPage() {
+  useDocumentTitle('404')
+  return (
+    <section className="not-found section"><Container><p className="eyebrow">404</p><h1>é¡µé¢ä¸å­˜åœ¨ã€‚</h1><Link className="text-link" to="/">è¿”å›é¦–é¡µ â†’</Link></Container></section>
+  )
+}

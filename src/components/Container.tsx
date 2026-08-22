@@ -1,1 +1,5 @@
-şë+ı¸§ı¶¬{®%Šwµß¯İzÿìµÚ.´ê^­«b¢yè¶—«š+myßî²¿ÛŠÛjÇºàÎzºè®‰â›­
+import type { PropsWithChildren } from 'react'
+
+export function Container({ children }: PropsWithChildren) {
+  return <div className="container">{children}</div>
+}

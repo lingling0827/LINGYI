@@ -1,1 +1,20 @@
-şë+ı¸§ı¶¬{®%Šwµß¯İzÿìµÚ.´ê^­«b¢yè¶—«š+myßî²¿ÛŠÛjÇºàÎzºè®‰â›­
+import { Link } from 'react-router-dom'
+import type { Project } from '../types'
+
+export function ProjectCard({ project }: { project: Project }) {
+  return (
+    <Link className="project-card" to={`/work/${project.slug}`}>
+      <div className="project-visual" style={{ background: project.accent }}>
+        {(project.cardImage ?? project.image) && <img className="project-visual-image" src={project.cardImage ?? project.image} alt={`${project.title} é¡¹ç›®å±•ç¤º`} />}
+        {!(project.cardImage ?? project.image) && <span className="project-visual-copy">{project.cover}</span>}
+      </div>
+      <div className="project-meta">
+        <div>
+          <p className="project-category">{project.category} Â· {project.year}</p>
+          <h3>{project.title}</h3>
+          <p>{project.summary}</p>
+        </div>
+      </div>
+    </Link>
+  )
+}

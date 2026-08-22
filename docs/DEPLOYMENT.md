@@ -1,1 +1,16 @@
-şë+ı¸§ı¶¬{®%Šwµß¯İzÿìµÚ.´ê^­«b¢yè¶—«š+myßî²¿ÛŠÛjÇºàÎzºè®‰â›­
+# Deployment
+
+## Vercel
+- Framework preset: Vite
+- Build command: `npm run build`
+- Output directory: `dist`
+
+## Netlify
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+## GitHub Pages
+å¦‚æœéƒ¨ç½²åˆ°å­è·¯å¾„ï¼Œè¯·åœ¨ `vite.config.ts` ä¸­é…ç½® `base`ï¼Œå¹¶å¤„ç† React Router çš„ SPA fallbackã€‚
+
+## Custom domain
+æŠŠ `VITE_SITE_URL` è®¾ç½®ä¸ºä½ çš„æ­£å¼åŸŸåï¼Œå¹¶åœ¨éƒ¨ç½²å¹³å°ç»‘å®šåŸŸåã€‚

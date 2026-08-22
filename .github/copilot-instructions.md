@@ -1,1 +1,1 @@
-şë+ı¸§ı¶¬{®%Šwµß¯İzÿìµÚ.´ê^­«b¢yè¶—«š+myßî²¿ÛŠÛjÇºàÎzºè®‰â›­
+Follow `AGENTS.md` as the primary repository instruction file. Keep the implementation lightweight, typed, accessible, and aligned with the existing editorial visual system. Prefer existing components and data structures over new abstractions.

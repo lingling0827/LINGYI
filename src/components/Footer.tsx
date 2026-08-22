@@ -1,1 +1,38 @@
-ώλ+ύΈ§ύ¶¬{®%wµί―έzÿμµΪ.΄κ^­«bΆyθ¶—«+myίξ²ΏΫΫjΗΊΰΞzΊθ®‰β›­
+import { Link } from 'react-router-dom'
+import { Container } from './Container'
+
+export function Footer() {
+  return (
+    <footer className="footer footer-reference" id="contact-footer">
+      <Container>
+        <div className="footer-reference-main">
+          <p className="footer-reference-label"><span aria-hidden="true" />GOT SOMETHING SERIOUS?</p>
+          <a className="footer-reference-heading" href="mailto:399349314@qq.com" aria-label="ε‘ι€ι‚®δ»¶θ‡³ 399349314@qq.com">LET&apos;S <em>TALK</em></a>
+          <a className="footer-reference-email" href="mailto:399349314@qq.com">399349314@qq.com</a>
+        </div>
+
+        <div className="footer-reference-links">
+          <div>
+            <p>η«™η‚Ήε°ε›Ύ</p>
+            <Link to="/work">δ½ε“</Link>
+            <Link to="/about">ε…³δΊ</Link>
+            <Link to="/contact">θ”η³»</Link>
+          </div>
+          <div>
+            <p>η¤ΎδΊ¤θ΄¦ε·</p>
+            <a href="https://www.zcool.com.cn/u/1366630" target="_blank" rel="noreferrer">zcool</a>
+            <a href="https://dribbble.com/lingyu_ui" target="_blank" rel="noreferrer">Dribbble</a>
+          </div>
+        </div>
+
+        <a className="footer-reference-top" href="#top" aria-label="Back to top">β†‘</a>
+
+        <div className="footer-reference-bottom">
+          <span>Β© 2026 LING YI</span>
+          <span>LING YI. DESIGN</span>
+          <span>MADE TO MOVE</span>
+        </div>
+      </Container>
+    </footer>
+  )
+}

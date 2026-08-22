@@ -1,1 +1,40 @@
-şë+ı¸§ı¶¬{®%Šwµß¯İzÿìµÚ.´ê^­«b¢yè¶—«š+myßî²¿ÛŠÛjÇºàÎzºè®‰â›­
+import { Menu, X } from 'lucide-react'
+import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import { Container } from './Container'
+
+const imagePath = (name: string) => `${import.meta.env.BASE_URL}images/${name}`
+
+const nav: Array<{ to: string; label: string; hash?: string }> = [
+  { to: '/', label: 'é¦–é¡µ' },
+  { to: '/work', label: 'ä½œå“' },
+  { to: '/about', label: 'å…³äº' },
+  { to: '/contact', label: 'è”ç³»' },
+]
+
+export function Header() {
+  const [open, setOpen] = useState(false)
+  return (
+    <header className="header">
+      <Container>
+        <div className="header-inner">
+          <Link className="brand" to="/" onClick={() => setOpen(false)} aria-label="è¿”å›é¦–é¡µ">
+            <img className="brand-logo" src={imagePath('lingyi.svg')} alt="LING YI" />
+          </Link>
+          <button className="menu-button" onClick={() => setOpen((v) => !v)} aria-label="åˆ‡æ¢èœå•">
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+          <nav className={open ? 'nav is-open' : 'nav'}>
+            {nav.map((item) => item.hash ? (
+              <Link key={item.to} to={item.to} onClick={() => setOpen(false)}>{item.label}</Link>
+            ) : (
+              <NavLink key={item.to} to={item.to} onClick={() => setOpen(false)}>
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
+        </div>
+      </Container>
+    </header>
+  )
+}

@@ -1,1 +1,9 @@
-þë+ý¸§ý¶¬{®%Šwµß¯ÝzÿìµÚ.´ê^­«b¢yè¶—«š+myßî²¿ÛŠÛjÇºàÎzºè®‰âž›­
+import { useEffect } from 'react'
+
+export function useDocumentTitle(title: string) {
+  useEffect(() => {
+    const previous = document.title
+    document.title = `${title} â€” Lin Studio`
+    return () => { document.title = previous }
+  }, [title])
+}
