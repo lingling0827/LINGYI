@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;600;700&display=swap');
-
 :root {
   font-family: "Switzer", "Aeonik", "Inter", "Helvetica Neue", Arial, sans-serif;
   color: #161616;
@@ -848,6 +846,20 @@ body { background: var(--bg); color: var(--ink); }
 .project-reference-cover img { display: block; width: 100%; height: 100%; max-height: min(68vw, 800px); object-fit: contain; }
 .project-reference-cover-sansheng { min-height: 0; aspect-ratio: 2.45 / 1; }
 .project-reference-cover-sansheng img { max-height: none; object-fit: cover; }
+
+@media (min-width: 901px) {
+  .project-reference-cover-sansheng {
+    aspect-ratio: 1776 / 800;
+    background: #000 !important;
+  }
+  .project-reference-cover-sansheng img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 .project-reference-cover > span { padding: 14vw 8vw; color: #161616; font: 500 clamp(30px, 5vw, 84px)/.95 var(--mono); text-align: center; }
 .project-reference-sections { margin-top: 120px; }
 .project-reference-section { display: grid; grid-template-columns: .24fr 1fr; gap: 56px; padding: 62px 0; border-top: 1px solid var(--line); }
